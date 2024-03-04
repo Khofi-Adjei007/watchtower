@@ -1,0 +1,32 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Homepage | Watchtower</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    {% tailwind_css %}
+</head>
+<body>
+    <div class="min-h-screen py-24 bg-cover bg-center" style="background-image: url({%static '/images/24565.jpg' %} );">
+        <div class="mx-auto sm:w-3/4 md:w-1/2 lg:w-1/3 p-4">
+            <div class="bg-cover bg-center mb-5 rounded-full h-28 w-28 mx-auto">
+                <img src="/static/images/download.png" alt="" class="rounded-full">
+            </div>
+
+            <form action="#" class="mx-auto flex flex-col">
+                <label for="" class="text-white mb-3">Staff ID</label>
+                <input type="text" class="mb-3 italic" placeholder="Enter Staff id">
+
+                <label for="" class="text-white mb-3">Password</label>
+                <input type="password" class="mb-3 italic" placeholder="Enter password">
+
+                <button type="submit" class="mt-6 bg-gray-800 w-full mx-auto text-white h-12 font-bold hover:bg-pink-700">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
