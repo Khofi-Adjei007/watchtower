@@ -1,0 +1,15 @@
+           <label for="" class="w-36 h-36 mr-2 flex flex-col">
+                      <div class="w-full h-3/5 mx-auto bg-cover bg-center" style="background-image: url({%static '/images/bill_gates_mugshot.png' %} );"></div>
+                      <div class="w-full h-3/5 mx-auto text-center p-2 bg-black">
+                          <h3 class="font-bold">Francis Oppong</h3>
+                          <p class="text-xs sm:text-sm md:text-xs lg:text-sm xl:text-xs text-wrap">Eastern Region</p>
+                      </div>
+                  </label>
+
+                  <label for="" class="w-36 h-36 mr-2 flex flex-col">
+                    <div class="w-full h-3/5 mx-auto bg-cover bg-center" style="background-image: url({%static '/images/bill_gates_mugshot.png' %} );"></div>
+                    <div class="w-full h-3/5 mx-auto text-center p-2 bg-black">
+                        <h3 class="font-bold">Francis Oppong</h3>
+                        <p class="text-xs sm:text-sm md:text-xs lg:text-sm xl:text-xs text-wrap">Lorem Ipsum is simply dummy text of the...</p>
+                    </div>
+                </label>
