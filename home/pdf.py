@@ -1,9 +1,10 @@
 from reportlab.pdfgen import canvas
 
+def hello(c):
+    content = ["Feature One", "Feature Two", "Feature Three"]
+    c.drawString(200,200, f"{content}")
 
-fileName = "firstpdf.pdf"
-documentTitle = "Sgn/Adjeteh/02/03/2024"
-
-pdf = canvas.Canvas(fileName)
-pdf.setTitle(documentTitle)
-pdf.save()
+c = canvas.Canvas("Kings.pdf")
+hello(c)
+c.showPage()
+c.save()
