@@ -1,4 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
+    var emptyFieldError = document.getElementById("empty_field_error");
+
+    if (emptyFieldError) {
+        // Element found, check if it's not hidden
+        if (emptyFieldError.textContent.trim() !== "") {
+            emptyFieldError.classList.remove("hidden");
+        }
+    } else {
+        console.error("Element with ID 'empty_field_error' not found.");
+    }
+}); 
+
+
+document.addEventListener("DOMContentLoaded", function() {
     const tab1 = document.getElementById("content-1");
     const tab2 = document.getElementById("content-2");
     const content1 = document.getElementById("docket_forms");
@@ -14,3 +28,4 @@ document.addEventListener("DOMContentLoaded", function() {
         content2.classList.remove("hidden");
     });
 });
+

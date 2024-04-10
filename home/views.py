@@ -63,7 +63,7 @@ def practice_page(request):
         user = User.objects.create_user(username=username, password=password, email=email)
         user.save()
         messages.success(request, 'Account created successfully!')
-        return redirect('success_page')  # Redirect to a success page
+        return redirect('home_page.html')  # Redirect to a success page
 
     # If GET request or form submission failed, render the form page
     return render(request, 'practice_page.html')

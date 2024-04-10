@@ -19,55 +19,43 @@
         <div class="bg-white p-8 rounded-lg shadow-md w-96">
             <h1 class="text-2xl font-semibold mb-6">User Form</h1>
 
-         
-
             <form method="post">
                 {% csrf_token %}
+
                 <div class="mb-4">
                     <label for="username" class="block text-gray-700">Username</label>
-                       <!-- Display personalized error messages for all empty field -->
-                       <div id="empty_field_error" class="text-red-500 {% if not empty_field_error %}hidden{% endif %}">
-                        {{  empty_field_error }}
-                    </div>
-
+                    <!-- Display personalized error messages for empty field -->
+                    <div id="empty_field_error" class="text-red-500 hidden">
+                        {{ empty_field_error }}
+                    </div>                                     
                     <input type="text" id="username" name="username" placeholder="Enter your username" class="w-full px-3 py-2 mt-1 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500">
                 </div>
 
-                <div class="mb-4">
-                    <label for="username" class="block text-gray-700">Email</label>
-                    <input type="text" id="Email" name="Email" placeholder="Enter your Email" class="w-full px-3 py-2 mt-1 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500">
-                 
+                <div class="mb-4">  
+                    <label for="email" class="block text-gray-700">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Enter your Email" class="w-full px-3 py-2 mt-1 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500">
                 </div>
+
                 <div class="mb-4">
-                    <label for="staff_id" class="block text-gray-700">Password</label>
-                    <input type="text" id="staff_id" name="password" placeholder="Enter a password" class="w-full px-3 py-2 mt-1 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500">
+                    <div id="password_complexity_error" class="text-red-500 hidden">
+                        {{ password_complexity_error }}
+                    </div> 
+                    <label for="password" class="block text-gray-700">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter a password" class="w-full px-3 py-2 mt-1 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500">
                 </div>
+
                 <div class="mb-4">
-                    <label for="staff_id" class="block text-gray-700">Confirm Password</label>
-                    <input type="text" id="staff_id" name="password_two" placeholder="Confirm Password" class="w-full px-3 py-2 mt-1 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500">
+                    <label for="password_two" class="block text-gray-700">Confirm Password</label>
+                    <input type="password" id="password_two" name="password_two" placeholder="Confirm Password" class="w-full px-3 py-2 mt-1 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500">
                 </div>
+
                 <div class="text-right">
                     <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Submit</button>
                 </div>
             </form>
         </div>
     </div>
+
+<script src="/static/js/functionalities.js"></script>
 </body>
-
-<script src="">   
-        // JavaScript to toggle visibility of error messages
-        document.addEventListener("DOMContentLoaded", function() {
-            var usernameError = document.getElementById("empty_field_error");
-            var emailError = document.getElementById("email-error");
-
-            // Show error message if not hidden
-            if (empty_field_error && !empty_field_error.classList.contains("hidden")) {
-                usernameError.style.display = "block";
-            }
-
-            if (emailError && !emailError.classList.contains("hidden")) {
-                emailError.style.display = "block";
-            }
-        });
-</script>
 </html>
