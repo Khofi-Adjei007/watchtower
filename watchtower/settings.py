@@ -59,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "django_browser_reload.middleware.BrowserReloadMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware"
 ]
 
 NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
