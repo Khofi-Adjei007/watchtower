@@ -65,3 +65,51 @@ def valiadtion():
     special_chars = string.punctuation
     num_chars = string.digits
     upercase_chars = string.ascii_uppercase
+
+
+
+def submissionpdf(request):
+    if request.method == 'POST':
+        text = request.POST.get('docket_forms', '')
+
+        # Generate PDF
+        response = HttpResponse(content_type='application/pdf')
+        response['Content-Disposition'] = f'attachment; filename="submission_{datetime.now().strftime("%Y-%m-%d")}.pdf"'
+
+        doc = SimpleDocTemplate(response, pagesize=letter)
+        styles = getSampleStyleSheet()
+        style_normal = styles['Normal']
+
+        content = []
+        content.append(Paragraph("Form Content:", style_normal))
+        content.append(Spacer(1, 12))
+        content.append(Paragraph(text, style_normal))
+
+        doc.build(content)
+        
+        return response
+
+    else:
+        return HttpResponse("This view only accepts POST requests.")
+    
+
+  # Check if passwords match
+        if password != password_two:
+            password_mismatch_error = 'Passwords do not match.'
+            return render(request, 'practice_page.html', {'password_mismatch_error': password_mismatch_error})
+
+        # Check password complexity requirements
+        if not (any(char.isupper() for char in password) and
+                any(char.isdigit() for char in password) and
+                any(char in string.punctuation for char in password)):
+            password_complexity_error = 'Password must contain at least one special character, one digit, and one uppercase letter.'
+            return render(request, 'practice_page.html', {'password_complexity_error': password_complexity_error})
+
+        # Check if email or username already exists
+        if User.objects.filter(email=email).exists():
+            email_exists_error = 'This email has already been used.'
+            return render(request, 'practice_page.html', {'email_exists_error': email_exists_error})
+        
+        elif User.objects.filter(username=username).exists():
+            username_exists_error = 'Username already exists.'
+            return render(request, 'practice_page.html', {'username_exists_error': username_exists_error})

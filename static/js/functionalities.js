@@ -11,6 +11,18 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 }); 
 
+document.addEventListener("DOMContentLoaded", function() {
+    var  email_exists_error = document.getElementById("email");
+
+    if ( email_exists_error) {
+        // Element found, check if it's not hidden
+        if ( email_exists_error.textContent.trim() !== "") {
+             email_exists_error.classList.remove("hidden");
+        }
+    } else {
+        console.error("Element with ID 'empty_field_error' not found.");
+    }
+}); 
 
 document.addEventListener("DOMContentLoaded", function() {
     const tab1 = document.getElementById("content-1");
@@ -28,4 +40,3 @@ document.addEventListener("DOMContentLoaded", function() {
         content2.classList.remove("hidden");
     });
 });
-
