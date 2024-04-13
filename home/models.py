@@ -7,7 +7,7 @@ class portalUsers(models.Model):
     details = models.CharField(max_length=250,default=0)
 
 
-class practice_data(models.Model):
+class registrations(models.Model):
     username = models.CharField(max_length=100)
     email = models.CharField(max_length=14)
     first_name = models.CharField(max_length=250, default='')

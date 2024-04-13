@@ -1,0 +1,99 @@
+<!-- user_form.html -->
+
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> The Watchtower | Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    {% tailwind_css %}
+</head>
+
+<body class="bg-gray-900">
+    <div class="min-h-screen flex flex-col-2 items-center justify-center py-26">
+        <div class="bg-white p-8 rounded-lg shadow-md w-[50%]">
+            <h1 class="text-2xl font-semibold mb-6">Register</h1>
+
+            <form method="post">
+                <div class="grid grid-cols-3 gap-4">
+
+                    <!--Start of first trimester-->
+                    <div class="mb-2">
+                        <label for="text" class="block text-gray-700">First Name <span class="text-red-700">*</span></label>                       
+                        <input type="text" id="first_name" name="username" placeholder="Enter your first name" class="w-full px-3 py-2 mt-1 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="text" class="block text-gray-700">Middle Name</label>
+                        <input type="text" id="middle_name" name="middle_name" placeholder="enter your last middle name (if any)" class="w-full px-3 py-2 mt-1 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="text" class="block text-gray-700">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" placeholder="enter your last name" class="w-full px-3 py-2 mt-1 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <!--End of first trimester-->
+
+
+                    <!--Start of second trimester-->
+                    <div class="mb-2">
+                        <label for="email" class="block text-gray-700">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" class="w-full px-3 py-2 mt-1 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="contact" class="block text-gray-700">Phone Number</label>
+                        <input type="number" id="contact" name="contact" placeholder="Enter your Phone Number" class="w-full px-3 py-2 mt-1 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="address" class="block text-gray-700">Physical Address (GPS) </label>
+                        <input type="text" id="contact" name="contact" placeholder="Address eg. 53 Westlands Avenue" class="w-full px-3 py-2 mt-1 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <!--End of second trimester-->
+
+
+                    <!--Start of third trimester-->
+                    <div class="mb-2">
+                        <label for="text" class="block text-gray-700">Current Rank</label>
+                        <input type="text" id="officer_rank" name="officer_rank" placeholder="Enter your current Rank" class="w-full px-3 py-2 mt-1 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="text" class="block text-gray-700">Current Station Posted</label>
+                        <input type="text" id="officer_current_station" name="officer_current_station" placeholder="Enter Current Station Posted" class="w-full px-3 py-2 mt-1 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="text" class="block text-gray-700">Staff_ID</label>
+                        <input type="text" id="officer_staff_ID" name="officer_staff_ID" placeholder="Enter Staff_ID" class="w-full px-3 py-2 mt-1 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                     <!--Start of third trimester-->
+
+                    <div class="mb-2 col-span-3">
+                        <label for="password" class="block text-gray-700">Password</label> 
+                        <input type="password" id="password" name="password" placeholder="Enter a password" class="w-full px-3 py-2 mt-1 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+
+                    <div class="mb-2 col-span-3">
+                        <label for="password_two" class="block text-gray-700">Confirm Password</label>
+                        <input type="password" id="password_two" name="password_two" placeholder="Confirm Password" class="w-full px-3 py-2 mt-1 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+
+                    <div class="col-span-2 text-right">
+                        <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script src="/static/js/functionalities.js"></script>
+</body>
+</html>
