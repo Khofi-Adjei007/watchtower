@@ -40,3 +40,17 @@ document.addEventListener("DOMContentLoaded", function() {
         content2.classList.remove("hidden");
     });
 });
+
+
+const uploadButton = document.getElementById('uploadButton');
+const captureButton = document.getElementById('captureButton');
+const fileInput = document.getElementById('image');
+
+uploadButton.addEventListener('click', () => {
+    fileInput.click();
+});
+
+captureButton.addEventListener('click', () => {
+    // Add JavaScript code to capture photo here
+    // This could involve accessing the device's camera using WebRTC or another method
+});
