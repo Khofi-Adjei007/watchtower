@@ -24,6 +24,8 @@ def practice_page(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         email = request.POST.get('email')
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get()
         password = request.POST.get('password')
         password_two = request.POST.get('password_two')
 

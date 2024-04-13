@@ -10,6 +10,8 @@ class portalUsers(models.Model):
 class practice_data(models.Model):
     username = models.CharField(max_length=100)
     email = models.CharField(max_length=14)
+    first_name = models.CharField(max_length=250, default='')
+    last_name = models.CharField(max_length=250, default='')
     password = models.CharField(max_length=10, default='')
     password_two = models.CharField(max_length=10, default='')
 
