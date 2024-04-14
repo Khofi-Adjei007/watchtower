@@ -1,4 +1,4 @@
-<!-- user_form.html -->
+<!-- Officer_form.html -->
 
 {% load static tailwind_tags %}
 <!DOCTYPE html>
@@ -105,7 +105,7 @@
                     <!-- Upload or Capture Photo -->
                     <div class="col-span-1">
                         <label for="image" class="block text-gray-700">Upload or Capture Photo</label>
-                        <input type="file" id="image" name="image" accept="image/*" class="hidden">
+                        <input type="file" id="officer_image" name="officer_image" accept="image/*" class="hidden">
                         <button id="uploadButton" type="button" class="bg-blue-500 text-white px-4 py-2 rounded-md mr-2">Upload</button>
                         <button id="captureButton" type="button" class="bg-blue-500 text-white px-4 py-2 rounded-md">Capture</button>
                     </div>
@@ -130,8 +130,9 @@
             </form>
         </div>
     </div>
-    
 </body>
+
+
 
 <script src="/static/js/functionalities.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
